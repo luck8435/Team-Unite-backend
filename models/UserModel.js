@@ -1,22 +1,22 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const UserSchema = mongoose.Schema(
     {
         username: {
             type: String,
-            required: true
+            required: true,
         },
         password: {
             type: String,
-            required: true
+            required: true,
         },
-        firstname: {
+        firstName: {
             type: String,
-            required: true
+            required: true,
         },
-        lastname: {
+        lastName: {
             type: String,
-            required: true
+            required: true,
         },
         isAdmin: {
             type: Boolean,
@@ -25,14 +25,14 @@ const UserSchema = mongoose.Schema(
         profilePicture: String,
         coverPicture: String,
         about: String,
-        livesin: String,
+        livesIn: String,
         worksAt: String,
         relationship: String,
         followers: [],
-        following: []
+        following: [],
     },
     { timestamps: true }
-)
+);
 
-const UserModel = mongoose.model("Users", UserSchema);
-export default UserModel
+const UserModel = mongoose.model('Users', UserSchema);
+export default UserModel;
